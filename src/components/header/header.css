@@ -1,0 +1,117 @@
+#header {
+    /* height: 75vh; */
+    margin: 0 5rem 0 -6.5rem;
+}
+
+.header__container {
+    width: var(--container-width-lg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+    height: auto;
+    width: 500px;
+    /* position: absolute;
+    right: 12.5%;
+    top: 2.1rem; */
+    overflow: hidden;
+    animation: logoVibration 0.5s linear infinite;
+  }
+  
+  @keyframes logoVibration {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      transform: scale(1.018) translateY(-3px);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  .logo::before {
+    content: "";
+    display: block;
+    /* position: absolute;
+    top: -5px; */
+    width: 4px;
+    height: 10px;
+    background-color: white;
+    border-radius: 5px;
+    animation: vibrationEffect 0.025s linear infinite;
+  }
+  
+  @keyframes vibrationEffect {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+
+.header__container-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 8rem 0 2rem;
+    gap: 1rem;
+}
+
+.header__container-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* --------------------media queries tab-----------------*/
+@media screen and (max-width: 1024px) {
+    .header__container {
+        width: var(--container-width-md);
+        grid-template-columns: 1fr;
+    }
+
+    #header {
+        margin: 0 5rem 0 -7rem;
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+
+    h1 {
+      text-align: center;
+    }
+}
+
+/* --------------------media queries mobile-----------------*/
+@media screen and (max-width: 600px) {
+    .logo {
+        height: auto;
+        width: 380px;
+        margin-left: -3rem;
+      }
+
+    h1, h2, h4 {
+        font-size: var(--font-size-sm-h1);
+    }
+
+    .header__container-left{
+        margin: 6rem 0 0;
+        align-items: center;
+    }
+
+}
