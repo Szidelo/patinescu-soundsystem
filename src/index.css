@@ -133,6 +133,10 @@ img {
     object-fit: cover;
 }
 
+.text-yellow {
+    color: var(--color-yellow);
+}
+
 /* --------------------media queries tab-----------------*/
 @media screen and (max-width: 1024px) {
     .container {

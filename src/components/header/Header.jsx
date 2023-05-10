@@ -13,6 +13,12 @@ const Header = () => {
 			delay: 500, // 0.5 seconds
 		},
 	});
+
+    const OnTextYellow = () => {
+        const element = document.querySelector('h1.title');
+        element.classList.toggle('text-yellow')
+    }
+
 	return (
 		<animated.div
 			id="header"
@@ -23,7 +29,7 @@ const Header = () => {
 			<div className="container header__container">
 				<div className="header__container-left">
 					<h2>Welcome to</h2>
-					<h1 className="title">Patinescu SoundSystem</h1>
+					<h1 className="title" onClick={OnTextYellow}>Patinescu SoundSystem</h1>
 					<h4>
 						"Light is a wave of electric and magnetic field...Sound is a wave of
 						air pressure. According to Quantum Mechanics, all the particles in
